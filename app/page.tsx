@@ -1,100 +1,152 @@
+"use client"
+
 import Image from "next/image";
+import profile from "../public/profile-3.webp"
+import { useEffect } from "react";
+
+function TextCard({ text }: { text: string }) {
+  return (
+    <div className="flex items-center w-full rounded-2xl p-4 backdrop-blur-sm bg-slate-100 mb-4">
+      <h2 className="flex flex-col w-full text-sm md:text-base text-center font-normal tracking-wide md:tracking-wider">
+        { text }
+      </h2>
+    </div>
+  )
+}
+
+function LinkCard({
+  url,
+  title,
+  icon
+}: {
+  url: string,
+  title: string,
+  icon: string
+}) {
+  return (
+    <a href={url} className="group flex items-center w-full rounded-2xl p-1 bg-slate-100 mb-4 hover:bg-slate-50 transition-shadow duration-300">
+      <div className="flex w-full text-center">
+        <div className="flex w-11 h-11 items-center">
+          <Image
+            className="p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150"
+            width={40}
+            height={40}
+            alt={icon}
+            src={icon}
+          />
+        </div>
+        <h2 className="flex justify-center items-center font-normal w-full text-sm md:text-base text-center tracking-wide md:tracking-wider -ml-10">
+          {title}
+        </h2>
+      </div>
+    </a>
+  )
+}
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const links = [
+    {
+      "title": "X platform",
+      "url": "https://x.com/jakubgania",
+      "icon": "/icons8-x-100.png"
+    },
+    {
+      "title": "GitHub",
+      "url": "https://github.com/jakubgania",
+      "icon": "/icons8-github-100.png"
+    },
+    {
+      "title": "YouTube",
+      "url": "https://www.youtube.com/@jakubganiasoftware",
+      "icon": "/icons8-youtube-100.png"
+    },
+    {
+      "title": "LinkedIn",
+      "url": "https://linkedin.com/in/jakubgania",
+      "icon": "/linkedin.png"
+    },
+    {
+      "title": "NeuronScale",
+      "url": "https://neuronscale.com",
+      "icon": "/neuronscale-logo.png"
+    },
+    {
+      "title": "Credly",
+      "url": "https://www.credly.com/users/jakub-gania",
+      "icon": "/icons8-credly-100.png"
+    },
+    {
+      "title": "DEV",
+      "url": "https://dev.to/jakubgania",
+      "icon": "/dev-black.png"
+    }
+  ]
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    setTimeout(() => {
+      let container:any = document.getElementById('container')
+      container.style.opacity = 1
+      container.style.filter = 'blur(0px)'
+    }, 300)
+  })
+
+
+  return (
+    <div id="container" className="animated">
+      <main className="flex items-center mx-auto flex-col w-full max-w-xl mt-16 px-8 pb-12">
+        <div className="flex items-center">
+        <div>
+        <Image
+          className="rounded-full"
+          alt="Avatar"
+          src={profile}
+          width={80}
+          height={80}
+        />
         </div>
+
+          <div className="flex flex-col px-6">
+            <div>
+              <h1 className="text-2xl font-semibold rounded-3xl tracking-tight">
+                Jakub Gania
+              </h1>
+            </div>
+
+            <div>
+              <p className="tracking-wider text-lg text-slate-300 font-medium">Software Engineer</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex gap-4 my-8">
+          <Image
+            src="/man-technologist.png"
+            alt="icon"
+            width={28}
+            height={28}
+          />
+          <Image
+            src="/rocket.png"
+            alt="icon"
+            width={28}
+            height={28}
+          />
+          <Image
+            src="/sparkles.png"
+            alt="icon"
+            width={28}
+            height={28}
+          />
+        </div>
+
+        <TextCard text="Hi! See my social media and other portals." />
+
+        {links.map((link) => (
+          <LinkCard key={link.url} {...link} />
+        ))}
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="text-sm font-semibold flex gap-6 flex-wrap items-center justify-center">
+        created by jakubgania
       </footer>
     </div>
   );
