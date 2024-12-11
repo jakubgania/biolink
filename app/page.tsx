@@ -122,20 +122,20 @@ export default function Home() {
           <Image
             src="/man-technologist.png"
             alt="icon"
-            width={28}
-            height={28}
+            width={26}
+            height={26}
           />
           <Image
             src="/rocket.png"
             alt="icon"
-            width={28}
-            height={28}
+            width={26}
+            height={26}
           />
           <Image
             src="/sparkles.png"
             alt="icon"
-            width={28}
-            height={28}
+            width={26}
+            height={26}
           />
         </div>
 
