@@ -5,6 +5,8 @@ import profile from "../public/profile-3.webp"
 import { useEffect } from "react";
 
 export default function Home() {
+  // define your own links, titles and icons
+
   const links = [
     {
       "title": "X platform",
@@ -50,7 +52,6 @@ export default function Home() {
       container.style.filter = 'blur(0px)'
     }, 300)
   })
-
 
   return (
     <div id="container" className="animated">
@@ -106,9 +107,6 @@ export default function Home() {
           <LinkCard key={link.url} {...link} />
         ))}
       </main>
-      <footer className="text-sm font-semibold flex gap-6 flex-wrap items-center justify-center">
-        created by jakubgania
-      </footer>
     </div>
   );
 }
