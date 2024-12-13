@@ -55,28 +55,25 @@ export default function Home() {
 
   return (
     <div id="container" className="animated">
-      <main className="flex items-center mx-auto flex-col w-full max-w-xl mt-16 px-8 pb-12">
+      <main className="flex items-center mx-auto flex-col w-full max-w-xl my-10 md:my-16 px-8">
         <div className="flex items-center">
-        <div>
-        <Image
-          className="rounded-full"
-          alt="Avatar"
-          src={profile}
-          width={80}
-          height={80}
-        />
-        </div>
+          <div className="relative w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20">
+            <Image
+              src={profile}
+              alt="Avatar"
+              fill
+              style={{
+                objectFit: 'contain',
+              }}
+              className="rounded-full"
+            />
+          </div>
 
-          <div className="flex flex-col px-6">
-            <div>
-              <h1 className="text-2xl font-semibold rounded-3xl tracking-tight">
-                Jakub Gania
-              </h1>
-            </div>
-
-            <div>
-              <p className="tracking-wider text-lg text-slate-300 font-medium">Software Engineer</p>
-            </div>
+          <div className="px-8">
+            <h1 className="text-lg md:text-xl lg:text-2xl font-semibold rounded-3xl tracking-tight">
+              Jakub Gania
+            </h1>
+            <p className="tracking-wider text-base -mt-1 md:text-lg text-slate-300 font-medium">Software Engineer</p>
           </div>
         </div>
 
