@@ -132,7 +132,7 @@ function LinkCard({
   icon: string
 }) {
   return (
-    <a href={url} className="group flex items-center w-full rounded-2xl p-1 bg-slate-100 mb-4 hover:bg-slate-50 transition-shadow duration-300">
+    <a href={url} target="_blank" className="group flex items-center w-full rounded-2xl p-1 bg-slate-100 mb-4 hover:bg-slate-50 transition-shadow duration-300">
       <div className="flex w-full text-center">
         <div className="flex w-11 h-11 items-center">
           <Image
