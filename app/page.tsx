@@ -4,6 +4,8 @@ import Image from "next/image";
 import profile from "../public/profile-3.webp"
 import { useEffect } from "react";
 
+import { TextCard } from "./text-card";
+
 export default function Home() {
   // define your own links, titles and icons
 
@@ -106,20 +108,6 @@ export default function Home() {
       </main>
     </div>
   );
-}
-
-function TextCard({
-  text
-}: { 
-  text: string
-}) {
-  return (
-    <div className="flex items-center w-full rounded-2xl p-4 backdrop-blur-sm bg-slate-100 mb-4">
-      <h2 className="flex flex-col w-full text-sm md:text-base text-center font-normal tracking-wide md:tracking-wider">
-        { text }
-      </h2>
-    </div>
-  )
 }
 
 function LinkCard({
