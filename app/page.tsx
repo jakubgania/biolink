@@ -7,47 +7,9 @@ import { useEffect } from "react";
 import { LinkCard } from "./link-card";
 import { TextCard } from "./text-card";
 
+import links from './links.json';
+
 export default function Home() {
-  // define your own links, titles and icons
-
-  const links = [
-    {
-      "title": "X platform",
-      "url": "https://x.com/jakubgania",
-      "icon": "/icons8-x-100.png"
-    },
-    {
-      "title": "GitHub",
-      "url": "https://github.com/jakubgania",
-      "icon": "/icons8-github-100.png"
-    },
-    {
-      "title": "YouTube",
-      "url": "https://www.youtube.com/@jakubganiasoftware",
-      "icon": "/icons8-youtube-100.png"
-    },
-    {
-      "title": "LinkedIn",
-      "url": "https://linkedin.com/in/jakubgania",
-      "icon": "/linkedin.png"
-    },
-    {
-      "title": "NeuronScale",
-      "url": "https://neuronscale.com",
-      "icon": "/neuronscale-logo.png"
-    },
-    {
-      "title": "Credly",
-      "url": "https://www.credly.com/users/jakub-gania",
-      "icon": "/icons8-credly-100.png"
-    },
-    {
-      "title": "DEV",
-      "url": "https://dev.to/jakubgania",
-      "icon": "/dev-black.png"
-    }
-  ]
-
   useEffect(() => {
     setTimeout(() => {
       let container:any = document.getElementById('container')
