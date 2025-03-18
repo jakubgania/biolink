@@ -12,11 +12,13 @@ import links from './links.json';
 export default function Home() {
   useEffect(() => {
     setTimeout(() => {
-      let container:any = document.getElementById('container')
-      container.style.opacity = 1
-      container.style.filter = 'blur(0px)'
+      let container = document.getElementById('container')
+      if (container) {
+        container.style.opacity = '1';
+        container.style.filter = 'blur(0px)';
+      }
     }, 300)
-  })
+  }, []);
 
   return (
     <div id="container" className="animated">
