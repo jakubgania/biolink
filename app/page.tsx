@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import profile from "../public/profile-3.webp"
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import { LinkCard } from "./link-card";
 import { TextCard } from "./text-card";
@@ -10,6 +10,8 @@ import { TextCard } from "./text-card";
 import links from './links.json';
 
 export default function Home() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     setTimeout(() => {
       let container = document.getElementById('container')
@@ -21,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div id="container" className="animated">
+    <div ref={containerRef} id="container" className="animated">
       <main className="flex items-center mx-auto flex-col w-full max-w-xl my-10 md:my-16 px-8">
         <div className="flex items-center">
           <div className="relative w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20">
