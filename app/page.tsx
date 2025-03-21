@@ -49,19 +49,19 @@ export default function Home() {
         <div className="flex gap-4 my-8">
           <Image
             src="/man-technologist.png"
-            alt="icon"
+            alt="Man technologist icon"
             width={26}
             height={26}
           />
           <Image
             src="/rocket.png"
-            alt="icon"
+            alt="Rocket icon"
             width={26}
             height={26}
           />
           <Image
             src="/sparkles.png"
-            alt="icon"
+            alt="Sparkles icon"
             width={26}
             height={26}
           />
