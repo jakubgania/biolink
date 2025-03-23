@@ -3,11 +3,13 @@ import Image from "next/image";
 export function LinkCard({
   url,
   title,
-  icon
+  icon,
+  alt,
 }: {
   url: string,
   title: string,
-  icon: string
+  icon: string,
+  alt: string,
 }) {
   return (
     <a href={url} target="_blank" className="group flex items-center w-full rounded-2xl p-1 bg-slate-100 mb-4 hover:bg-slate-50 transition-shadow duration-300">
@@ -17,7 +19,7 @@ export function LinkCard({
             className="p-1 group-hover:-rotate-[20deg] transition-all ease-in-out duration-150"
             width={40}
             height={40}
-            alt={icon}
+            alt={alt}
             src={icon}
           />
         </div>

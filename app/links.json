@@ -2,36 +2,43 @@
   {
     "title": "X platform",
     "url": "https://x.com/jakubgania",
-    "icon": "/icons8-x-100.png"
+    "icon": "/icons8-x-100.png",
+    "alt": "X platform icon"
   },
   {
     "title": "GitHub",
     "url": "https://github.com/jakubgania",
-    "icon": "/icons8-github-100.png"
+    "icon": "/icons8-github-100.png",
+    "alt": "GitHub icon"
   },
   {
     "title": "YouTube",
     "url": "https://www.youtube.com/@jakubganiasoftware",
-    "icon": "/icons8-youtube-100.png"
+    "icon": "/icons8-youtube-100.png",
+    "alt": "YouTube icon"
   },
   {
     "title": "LinkedIn",
     "url": "https://linkedin.com/in/jakubgania",
-    "icon": "/linkedin.png"
+    "icon": "/linkedin.png",
+    "alt": "LinkedIn icon"
   },
   {
     "title": "NeuronScale",
     "url": "https://neuronscale.com",
-    "icon": "/neuronscale-logo.png"
+    "icon": "/neuronscale-logo.png",
+    "alt": "NeuronScale icon"
   },
   {
     "title": "Credly",
     "url": "https://www.credly.com/users/jakub-gania",
-    "icon": "/icons8-credly-100.png"
+    "icon": "/icons8-credly-100.png",
+    "alt": "Credly icon"
   },
   {
     "title": "DEV",
     "url": "https://dev.to/jakubgania",
-    "icon": "/dev-black.png"
+    "icon": "/dev-black.png",
+    "alt": "DEV icon"
   }
 ]
