@@ -5,6 +5,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Biolink",
   description: "A site for all your interesting links",
+  keywords: [
+    "about",
+    "links",
+    "socials",
+    "youtube",
+    "linkedin",
+    "github",
+  ]
 };
 
 export default function RootLayout({
