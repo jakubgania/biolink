@@ -14,7 +14,7 @@ export default function Home() {
   
   useEffect(() => {
     setTimeout(() => {
-      let container = document.getElementById('container')
+      const container = document.getElementById('container')
       if (container) {
         container.style.opacity = '1';
         container.style.filter = 'blur(0px)';
